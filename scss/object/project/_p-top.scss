@@ -330,7 +330,7 @@ margin-bottom: 1.9rem;
 //-----------p-top__flow---------
 
 .p-top__flow {
- padding-block: 5rem;
+ padding-block: 5rem 0;
  @include sp {
    padding-block: 4.6rem 0;
  }
@@ -383,11 +383,14 @@ margin-bottom: 1.9rem;
 .p-top-flow-diagram-row__marker--bottom::before {
  content: '';
  width: 0.3rem;
- height: 14.5rem;
+ height: 6rem;
  background-color: $color-red;
  position: absolute;
  left: 50%;
  transform: translateX(-50%);
+ @include sp {
+  height: 14.5rem;
+ }
 }
 
 .p-top-flow-diagram-row__marker--bottom::after {
@@ -428,8 +431,114 @@ margin-bottom: 1.9rem;
 
 
 
-//-----------p-top__---------
+//-----------p-top__faq---------
 
+.p-top__faq {
+ padding-block: 11rem;
+ @include sp {
+   padding-block: 5.5rem;
+ }
+}
+
+.p-top-faq__list {
+ padding-top: 3.6rem;
+ @include sp {
+  padding-top: 3.9rem;
+ }
+}
+
+.p-top-faq__item {
+ border-bottom: 0.05rem solid #000;
+}
+.p-top-faq__item--top {
+ border-top: 0.05rem solid #000;
+}
+
+.p-top-faq__question {
+ display: flex;
+ align-items: center;
+ padding-block: 1.7rem 1.3rem;
+ @include sp {
+  padding-block: 1.5rem 1.3rem;
+ }
+}
+.p-top-faq__answer {
+ display: flex;
+ align-items: center;
+ padding-block: 1.7rem 1.3rem;
+ background-color: rgba(203, 0, 0, 0.098);
+ @include sp {
+  padding-block: 1.5rem 1.3rem;
+ }
+}
+
+.p-top-faq-question__marker {
+ padding-top: 0.3rem;
+ background-color: #000;
+ width: 3.5rem;
+ height: 3.5rem;
+ border-radius: 50%;
+ text-align: center;
+ color: #fff;
+ font-size: 2rem;
+ line-height: calc(30 / 20);
+ margin-inline: 2rem 1rem;
+ @include sp {
+  margin-inline: 0rem 2rem;
+ }
+}
+
+.p-top-faq-answer__marker {
+ padding-top: 0.3rem;
+ background-color: $color-red;
+ width: 3.5rem;
+ height: 3.5rem;
+ border-radius: 50%;
+ text-align: center;
+ color: #fff;
+ font-size: 2rem;
+ line-height: calc(30 / 20);
+ margin-inline: 2rem 1rem;
+ @include sp {
+  margin-inline: 0rem 2rem;
+ }
+}
+
+.p-top-faq-question__text {
+ font-size: 1.7rem;
+ line-height: calc(30 / 17);
+ font-weight: 500;
+ flex: 1;
+ @include sp {
+   margin-right: 1.5rem;
+   font-size: 1.6rem;
+   line-height: calc(30 / 16);
+ }
+}
+
+.p-top-faq-answer__text {
+ font-size: 1.7rem;
+ line-height: calc(30 / 17);
+ flex: 1;
+ color: $color-red; 
+ @include sp {
+  padding-right: 4.7rem;
+  font-size: 1.6rem;
+  line-height: calc(30 / 16);
+ }
+}
+
+.p-top-faq-question__img {
+ width: 1.5rem;
+ margin-right: 2.8rem;
+@include sp {
+ margin-right: 1.4rem;
+}
+}
+
+.u-transform-180 {
+ transform: rotate(180deg);
+}
 
 //-----------p-top__---------
 
