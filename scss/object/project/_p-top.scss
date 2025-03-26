@@ -330,7 +330,7 @@ margin-bottom: 1.9rem;
 //-----------p-top__flow---------
 
 .p-top__flow {
- padding-block: 5rem 0;
+ padding-block: 5rem;
  @include sp {
    padding-block: 4.6rem 0;
  }
@@ -343,6 +343,7 @@ margin-bottom: 1.9rem;
  row-gap: 5.7rem;
  @include sp {
    padding-top: 3.6rem;
+   row-gap: 3.6rem;
  }
 }
 
@@ -357,7 +358,42 @@ margin-bottom: 1.9rem;
  height: 2rem;
  border-radius: 1rem;
  margin-inline: 5rem;
+ position: relative;
 }
+
+.p-top-flow-diagram-row__marker::before {
+ content: '';
+ width: 0.3rem;
+ height: 12rem;
+ background-color: $color-red;
+ position: absolute;
+ left: 50%;
+ transform: translateX(-50%);
+}
+
+.p-top-flow-diagram-row__marker--bottom::before {
+ content: '';
+ width: 0.3rem;
+ height: 6rem;
+ background-color: $color-red;
+ position: absolute;
+ left: 50%;
+ transform: translateX(-50%);
+}
+
+.p-top-flow-diagram-row__marker--bottom::after {
+ content: '';
+ width: 2.5rem;
+ height: 2.5rem;
+ border: 0.3rem solid $color-red;
+ border-color: transparent transparent $color-red $color-red;
+ position: absolute;
+ left: -0.25rem;
+ top: 3.3rem;
+ transform: translateX(-50%);
+ transform: rotate(-45deg);
+}
+
 
 .p-top-flow-diagram-row__head {
  color: $color-red;
